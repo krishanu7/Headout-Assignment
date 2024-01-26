@@ -11,12 +11,11 @@ const DATA_DIR = "/tmp/data";
 // Define an endpoint for handling GET requests to /data
 app.get("/data", (req, res) => {
   // Extract the values of 'n' and 'm' from the query parameters
-  const fileName = req.params.n;
-  const lineNumber = req.params.m;
-
+  const fileName = req.query.n;
+  const lineNumber = req.query.m;
   // Check if 'n' is provided
   if (!fileName) {
-    // If file name is not provided, respond with a 400 Bad Request status and a message
+    // If file name is not provided respond as file name is required
     return res.status(400).send("File name is required");
   }
 
