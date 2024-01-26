@@ -27,14 +27,14 @@ This project is a simple HTTP server that handles GET requests on the endpoint `
    ```
 
 ## Endpoints
-
-    Example Requests:
-    Get entire file content:
+   Get entire file content:
     ```
     http://localhost:8080/data?n=1
     ```
-    
-    Get content at a specific line:
+    <img width="1381" alt="Screenshot 2024-01-26 at 4 40 07 PM" src="https://github.com/krishanu7/Headout-Assignment/assets/93394632/d3e96c73-c6c8-4c1c-9640-0a7dbf6fe614">
+
+   Get content at a specific line:
     ```
     http://localhost:8080/data?n=1&m=5
     ```
+    <img width="1381" alt="Screenshot 2024-01-26 at 4 29 47 PM" src="https://github.com/krishanu7/Headout-Assignment/assets/93394632/c76cc5d9-dc4e-41dd-9a13-0b51748a980f">
