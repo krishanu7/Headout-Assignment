@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 // Define the directory where data files are stored
-const DATA_DIR = '/tmp/data';
+const DATA_DIR = "/tmp/data";
 
 // Define an endpoint for handling GET requests to /data
 app.get("/data", (req, res) => {
@@ -39,6 +39,10 @@ app.get("/data", (req, res) => {
     }
     // Read the specified line from the file
     const content = readLine(filePath, lineNumberInt);
+    return res.json({ data: content });
+  } else {
+    //If m is not provied then send the entire content
+    const content = fs.readFileSync(filePath, "utf8");
     return res.json({ data: content });
   }
 });
